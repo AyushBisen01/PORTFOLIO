@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     color: #E0E0E0;
     background-color: black;
+    overflow-x: hidden;
 }
 
 /* Header and Navigation */
@@ -83,6 +84,7 @@ header {
     color: #000000;
     position: relative;
     z-index: 10;
+    padding-top: 5.5rem;
 }
 
 .hero-text {
@@ -224,6 +226,7 @@ header {
     text-shadow: 0 2px 8px #000A;
     transition: box-shadow 0.3s, transform 0.3s;
     min-height: 200px;
+    margin-bottom: 1.2rem;
 }
 
 .certificate-row:hover {
@@ -403,6 +406,138 @@ footer a:hover {
     }
     .nav-logo {
         font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 0.98rem;
+    }
+    .background {
+        border: none;
+        transform: scale(1);
+        min-height: 300px;
+        max-height: 60vh;
+    }
+    .hero {
+        padding-top: 7.5rem;
+        margin-top: 0;
+        z-index: 2;
+    }
+    .about {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        z-index: 3;
+        position: relative;
+    }
+    .Certificates {
+        max-width: 100vw;
+        box-sizing: border-box;
+        padding-left: 0;
+        padding-right: 0;
+        border-radius: 10px;
+        overflow-x: hidden;
+    }
+    .vertical-certificates {
+        gap: 1.2rem;
+        width: 100vw;
+        box-sizing: border-box;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .certificate-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.7rem;
+        padding: 1rem 0.2rem;
+        max-width: 98vw;
+        min-width: 0;
+        margin-bottom: 1.2rem;
+        box-sizing: border-box;
+    }
+    .cert-img {
+        width: 90vw;
+        max-width: 220px;
+        height: auto;
+        box-sizing: border-box;
+    }
+    .cert-text {
+        min-height: unset;
+        font-size: 0.98rem;
+        text-align: center;
+        align-items: flex-start;
+        padding: 0.2rem 0;
+        word-break: break-word;
+    }
+    .about, .Certificates, .contact {
+        box-sizing: border-box;
+        width: 100vw;
+        max-width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem 1rem;
+    }
+    .nav-logo {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 0.7rem;
+        width: 100%;
+        margin-top: 0.2rem;
+    }
+    .nav-links li a {
+        font-size: 0.98rem;
+    }
+    .hero-text {
+        align-items: center;
+    }
+    .hero-text h1 {
+        font-size: 1.5rem;
+        -webkit-text-stroke: 0.5px #fff;
+        text-stroke: 0.5px #fff;
+    }
+    .hero-text p, .hero-rotating {
+        font-size: 1rem;
+    }
+    .hero img {
+        width: 160px;
+        height: 160px;
+        flex: 0 0 160px;
+        margin-left: 0;
+    }
+    .about h2 {
+        font-size: 1.3rem;
+    }
+    .Certificates h2 {
+        font-size: 1.3rem;
+    }
+    .contact h2 {
+        font-size: 1.3rem;
+    }
+    .contact input, .contact textarea {
+        font-size: 0.98rem;
+    }
+    .contact button {
+        font-size: 0.98rem;
+        padding: 0.6rem 1.2rem;
+    }
+    footer {
+        padding: 1rem 0.2rem;
+        font-size: 0.98rem;
+    }
+    footer a {
+        margin: 0 0.5rem;
+        font-size: 1rem;
+    }
+    .modal-content {
+        min-width: 0;
+        width: 98vw;
     }
 }
 
