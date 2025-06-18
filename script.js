@@ -1,4 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile nav hamburger menu
+    const navToggle = document.getElementById('mobile-nav-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (navToggle && mobileNav) {
+        navToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            mobileNav.classList.toggle('open');
+        });
+        // Close menu when a link is clicked
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('open');
+            });
+        });
+        // Optional: close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileNav.contains(e.target) && e.target !== navToggle) {
+                mobileNav.classList.remove('open');
+            }
+        });
+    }
+
     // Typing animation for hero section (main heading)
     function typeHeroHeading(h1Elem, html, speed = 28, cb) {
         let temp = document.createElement('div');
